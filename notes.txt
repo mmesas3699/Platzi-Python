@@ -301,3 +301,101 @@ Juego del ahorcado con python (ahorcado.py)
 
 
 Qué es una busqueda binaria (binary_search.py)
+
+
+
+
+
+
+
+
+
+
+--------------------------------------
+
+Uso de sets en python (conjuntos)
+ 
+	Los sets son muy similares a las listas, pero estas no permiten elementos repetidos.
+
+	Cuando trabajamos con sets, podemos realizar las operaciones básicas de conjuntos:
+		* Intercepción 
+		* Diferencia
+		* Unión
+
+	>>> s = set([1, 2, 3])
+	>>> t = set([3, 4, 5])
+	>>> s.union(t) 					# {1, 2, 3, 4, 5}
+	>>> s.intersection(t) 			# {3}
+	>>> s.difference(t) 			# {4, 5}
+
+
+Dictionary comprehension y List comprehension
+
+	Permiten añadir sintactyc sugar
+	Python permite crear e inicializar listas y diccionarios con una sintaxis más natural
+
+	List comprehesion: convierte una secuencia existente en una nueva secuencia.
+
+	List comprehesion != Dictionary comprehesion (list retorna list y dictionary un diccionario)
+
+	----- codigo normal -----
+
+	>>> pares = []
+	>>> for num in range(1,31):    # range() no incluye el ultimo número
+			if num % 2 == 0:
+				pares.append(num)
+	>>> pares
+		[2, 4, 6, 8,.............,30]
+
+
+	----- list comprehesion ----
+	>>> even = [num for num in range(1, 31) if num % 2 == 0]
+	>>> even
+		[2, 4, 6, 8,.............,30]
+
+
+	--- codigo normal diccionarios -----
+	>>> cuadrados = {}
+
+	>>> for num in range(1, 11):
+	    	cuadrados[num] = num**2
+
+	>>> cuadrados
+	
+
+	------ dictionary comprehension ------
+
+	>>> squares = {num: num**2 for num in range(1, 11)}
+	>>> squares
+	num: num**2 (el primer num es la llave y el segundo es el valor)
+
+
+Manejo de errores en python
+
+	* Cuando se genera un error (throw), si este no es atrapado el programa se detiene
+	* Para manejar el error se usan los keywords 'try/except'
+
+		my_string = 'una string'
+
+		try:
+			int(my_string)
+		except ValueError:
+			# manejo del error
+		finally:
+			# Se ejecuta pase lo que pase
+
+
+	Ver la jerarquia de errores en python ??????
+
+	try / except / else / finally
+
+	La clausula else se ejecuta si no han ocurrido excepciones y antes de la clausula finally
+
+
+Errores personalizados (errores.py)
+	
+
+
+
+
+
