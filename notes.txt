@@ -1,0 +1,303 @@
+¿Por qué programar en Python?
+
+	Por su comunidad
+	Por su sintaxis clara
+	La usan: Google, Reddit
+	
+	- Que es programar: Programar es darle instrucciones al computador para hacer algo que tu quieres. Desde un sitio web a llevar humanos a marte.
+	Para lograr construir lo que quieres debe unir piezas básicas del lenguaje y dependiendo de como las unas vas a construir eso que imaginas.
+	
+¿Qué es la programación?
+
+	Es una secuencia de instrucciones que especifican cómo realizar un cómputo
+	
+	Todos los programas se componen de 'partes' básicas que se utilizan para crear 'partes ' más complejas.
+	
+	
+Guía de instalación y conceptos básicas
+
+	Python es un lenguaje de programación creado por Guido Van Rossum, con una sintaxis muy limpia, ideado para enseñar a la gente a programar bien. Se trata de un lenguaje interpretado de script.
+	
+	Ventajas:
+		Legible: sintaxis intuitiva y estricta.
+		Productivo: ahorra mucho código.
+		Portable: para todo sistema operativo.
+		Recargado: viene con muchas librerías por defecto.
+		
+		
+Operadores comunes:
+	
+	Longitud de una cadena, lista, tupla:
+	>>> len('key') 
+	
+	Aplicar una conversión a un conjunto como una lista:
+	>>> map(str, [1, 2, 3, 4])
+	['1', '2', '3', '4']
+	
+	Redondear un flotante con X número de decimales:
+	>>> round(6.3243, 1)
+	6.3
+	
+	Generar un rango en una lista:
+	>>> range(5)
+	[0, 1, 2, 3, 4]
+	
+	Sumar un conjunto:
+	>>> sum([1, 2, 4])
+	7
+	
+	Organizar un conjunto:
+	>>> sorted([5, 2, 1])
+	[1, 2, 5]
+	
+	
+Operadores matemáticos en python
+
+	(+) suma
+	(-) resta
+	(*) multiplicación
+	(/) división
+	(//) división de enteros
+	(%) operador modulo = lo que sobra de una división (5%4 = 1)
+	(**) Potencias
+	(>) mayor que
+	(<) menor que
+	(==) igual
+	(>=) mayor igual
+	(<=) menor igual 
+	
+Tipos de datos en python
+
+	Orden de operaciones:
+		PEMDAS (Paréntesis, Exponentes, Multiplicación, División, Adición, Sustracción) 
+	
+Declara variables y expresiones
+
+	• Las expresiones se componen de valores conectados por operadores.
+	• Cuando el PC evalúa una expresión, el resultado es otro valor.
+	• Los valores pueden guardarse en variables. 
+	• Las variables se pueden reasignar. Deben tener un nombre significativo, pero no pueden ser palabras reservadas del lenguaje:
+		○ False
+		○ None
+		○ True
+		○ And
+		○ As
+		○ Assert
+		○ Break
+
+
+
+
+--------
+
+
+Espacio para agregar lo que hice en la casa
+
+
+
+
+--------
+
+
+Funciones con parámetros (tipo_de_cambio.py)
+
+	Limitantes
+		* El nombre de la función no puede empezar con un digito.
+		* No puede ser una palabra reservada (keyword).
+		* Las variables y las funciones deben tener nombres distintos (la ultima definición es la que gana).
+
+		
+		Flujo de ejecución
+			* Comienza con la primera declaración de arriba hacia abajo.
+			* Cada declaración se ejecuta de izquierda a derecha, siguiendo el orden de 
+				operaciones.
+			* Cuando una declaración contiene una llamada a una función, el cuerpo de la función
+				se ejecuta con las mismas reglas 
+
+
+Estructuras de condicionales en python
+
+	Condicionales:
+		* Una expresión booleana se evalúa como verdadera o falsa (True, False)
+		* Los operadores relacionales son:
+			== (igual)
+			!= (diferente)
+			< (menor que)
+			> (mayor que)
+			<= (menor o igual)
+			>= (mayor o igual)
+		* Los operadores lógicos son:
+			and
+			or
+			not
+
+
+Calcular si un número es primo (numeros-primos.py)
+
+Buenas practicas del lenguaje
+	
+	El Zen de Python:
+		En la consola interactiva 
+		>>> import this (retorna el zen de python)
+
+		Hermoso es mejor que feo.
+		Explícito es mejor que implícito.
+	Simple es mejor que complejo.
+	Complejo es mejor que complicado.
+	Sencillo es mejor que anidado.
+	Escaso es mejor que denso.
+	La legibilidad cuenta.
+	Los casos especiales no son lo suficientemente especiales para romper las reglas.
+	Lo práctico le gana a la pureza.
+	Los errores no debe pasar en silencio.
+	A menos que sean silenciados.
+	En cara a la ambigüedad, rechazar la tentación de adivinar.
+	Debe haber una - y preferiblemente sólo una - manera obvia de hacerlo.	
+	Aunque esa manera puede no ser obvia en un primer momento a menos que seas holandés.
+	Ahora es mejor que nunca.
+	Aunque “nunca” es a menudo mejor que “ahora mismo”.
+	Si la aplicación es difícil de explicar, es una mala idea.
+	Si la aplicación es fácil de explicar, puede ser una buena idea.
+	Los espacios de nombres son una gran idea ¡hay que hacer más de eso!
+
+
+Comparación de string y unicode
+
+	Los str son inmutables
+	Para modificarla hay que crear un nuevo string
+
+	ASCII vs UNICODE
+		* Ambos son codificadores de caracteres
+		* ASCII (American standard code for information interchange)
+		* UNICODE incluye la mayoria de los alfabetos del mundo
+
+		Python codifica en ASCII por defecto, para cambiarlo por UNICODE debemos colocar 'u' antes del string
+
+		Python 2 = ASCII
+		Python 3 = UNICODE
+
+
+Factorial de un número con recursión (factorial.py)
+
+
+	def fact(n):
+	    pass
+
+	 Factorial de 5 se expresa 5!:
+	 	5! = 120
+
+	 	5 * fact(4)
+	 		4 * fact(3)
+	 			3 * fact(2)
+	 				2 * fact(1)
+	 					1 * fact(0)
+	 						1
+
+   				    	1 * 1   <---- va en esta dirección
+    					1
+    				2 * 1
+    				2
+    			3 * 2
+    			6
+    		4 * 6
+    		24
+    	5 * 24
+    	120
+
+
+Manejo de strings en python
+
+	* Un string es una secuencia de caracteres.
+	* Los caracteres se pueden acceder por su indice (los indices empiezan en cero)
+
+
+		0	1	2	3	4	5	
+		p 	l 	a 	t 	z 	i
+
+	>>> len(string) (retorna el tamaño del string)
+
+	OFF BY ONE (como en excel)
+
+	>>> my_string = 'miguel'
+	>>> my_string.upper()
+		MIGUEL
+	>>> my_string.lower()
+		miguel
+	>>> my_string.find('i') (retorna la posición de la primera ocurrencia)
+		1
+
+
+
+
+
+
+--------------------------------
+
+Ciclos en python con while (aleatorio.py)
+
+	* Similar a un for loop, pero en lugar de recorrer una secuencia, se ejecuta hasta que una condición se convierta en falsa.
+	* Se debe tener mucho cuidado de no caer en un infinite loop.
+
+	>>> i = 10
+	>>> while i > 0:
+			print('Ando en un loop')
+
+			i = 1
+
+
+ 
+ Calcular si una palabra es palindromo (palindromo.py)
+
+
+Introducción a listas en python (average-temps.py)
+
+	* Es una secuencia de elementos
+	* Cuando se asigna a una variable, permite agrupar varios elementos en un solo lugar.
+	* Se crean con los [] o con la keyword 'list'
+
+	>>> supermercado = ['apio', 'tomate', 'queso']
+	>>> temperaturas = [24, 26, 18, 20, 21]
+	>>> amigos = list()
+
+	* Las listas son mutables
+
+	>>> supermercado[0] = 'salsa'
+	>>> supermercado
+		['salsa', 'tomate', 'queso']
+
+	>>> amigos.append('enrique')  (append agrega un elemento al final de la lista)
+	>>> amigos
+		['enrique']
+	>>> amigos.append('miguel')
+	>>> amigos
+		['enrique', 'miguel']
+
+
+Operaciones con listas en python
+	
+	Con las listas se pueden usar solo dos operadores: suma y multiplicación
+
+	>>> amigos2 = ['2', '3']
+	>>> am = amigos + amigos2
+	>>> am
+		['enrique', 'miguel', '2', '3']
+	>>> am.sort()
+		['2', '3', 'enrique', 'miguel']
+
+
+	>>> amigos * 2
+		['enrique', 'miguel', 'enrique', 'miguel']
+
+
+	Las lista tambien tiene slices
+
+	>>> amigos[1:] = ['miguel']
+	>>> amigos[:1] = ['enrique']
+
+
+Juego del ahorcado con python (ahorcado.py)
+	
+	En python las constantes no exiten, para definir una constante hay que escribirla en mayúscula
+
+
+Qué es una busqueda binaria (binary_search.py)
