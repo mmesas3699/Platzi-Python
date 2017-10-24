@@ -395,7 +395,111 @@ Manejo de errores en python
 Errores personalizados (errores.py)
 	
 
+Manejo de archivos en python (escribir.py)
+
+	* Python puede leer y escribir archivos con la función 'open'.
+	* La función 'open' regresa un objeto archivo (file).
+	* Los archivos pueden ser de texto o binarios.
+	* Se tiene que especificar el modo en que se maneja el archivo 
+		- 'r'  = read
+		- 'w'  = write
+		- 'a'  = añadir (append)
+		- 'r+' = leer y escribir
+	* Siempre se debe cerrar el archivo con el metodo 'close'
+	* La mejor manera de manipular archivos es con el keyword 'with' que es un manejador de contexto 
+		si se usa este 'with' no es necesario cerrar el archivo.
+
+
+	Lectura de archivos:
+
+		* El objeto archivo tiene dos métodos para leerlo: read, readlines
+
+		>>> with open('file.txt', 'r') as f:
+				for line in f:
+					print(line)
+
+
+	Escritura de archivos: (si el archivo no exite python lo crea SI EL ARCHIVO EXISTE LO SOBRE ESCRIBE)
+
+		* Para escribir a un archivo, se utiliza el método 'write'
+
+		>>> with open('file.txt', 'w'):
+				for i in range(5):
+					print('hello')
+
+
+
+Programacion orientada a objetos en python
+
+	Clases y objetos
+		* Permite definir tipos propios
+		* Permite manejar datos y lógica en un solo contenedor.
+		* Las clases son como fabricas (moldes) para crear otros objetos.
+
+
+		* Los objetos tiene atributos que se pueden definir al momento de inicializar un nuevo objeto o
+			directamente en la instancia.
+		* Las clases pueden tener variables de clase, variables de instancia y variables locales.
+			- variables locales = las que se definen dentro de una función.
+			- variables globales = las que se definen fuera de las funciones o del código
+			- variable de clase = todos los atributos que comparten todos los objetos de la clase (por lo 
+				general todos los carro tiene 4 llantas)
+			- variable de instancia = el color de un carro, el atributo de cada objeto en especifico.
+		* Aunque python no tiene el concepto de variables privadas integrado al lenguaje, es prática común 
+			definirlas con un guión bajo.
+		* isinstance = para saber si es instancia de una clase
+		  hasattr = si tiene algún atributo
+
+
+		* Los metodos son como funciones que tiene sentido unicamente en el contexto de una clase.
+		* Al igual que las variables privadas, los metodos privados se definen con un guión bajo.
+		* La encapsulación (concepto clave de la programación orientada a objetos):
+			- Declarar todas las variables y metodos como privados a menos que sea necesario que otra
+				parte del programa los acceda.
+			- Esconder la complejidad del programa.		
+		* Un metodo clave que casi todas las clases deben tener es '__init__'
+		* Otro es '__str__'
+		* Existen varios tipos de metodos:
+			- Estaticos
+			- de clase
+			- de instancia
+			- getters
+			- setters
+
+
+Modelar un objeto en python (main.py, lamp.py)
+
+
+Decoradores en python (funcion_protegida.py)
+
+	Es una funcion que recibe como parametro otra funcion y que retorna una tercera funcion
+
+	Se usa el simbolo @
+
+
+Paquetes y modulos
+	
+	* Un modulo permite agrupar funcionalidades comunes en un solo archivo (un modulo es un archivo .py).
+	* Cuando varios modulos agrupan funcionalidades comunes, se agrupan en una carpeta/directorio y son
+		paquetes.
+	* Python reconoce que un directorio es un paquete porque contiene un archivo '__init__.py'
+
+
+
+Entorno virtual en python  (/servidor)
+
+	Paquetes de terceros:
+		* PyPi (python package index): repositorio de paquetes de terceros que se pueden utilizar en
+			proyectos de python
+
+	
+	Ambientes virtuales:
+		* Es buena practica crear un ambiente virtual por cada proyecto de python en el que trabaje.
+		* Evita conflictos de paquetes en el interprete principal
 
 
 
 
+Que es web scraping?
+
+	Es una herramienta que permite visitar sitios web, analizar su contenido y obtener información.
