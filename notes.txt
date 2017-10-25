@@ -71,6 +71,7 @@ Tipos de datos en python
 	Orden de operaciones:
 		PEMDAS (Paréntesis, Exponentes, Multiplicación, División, Adición, Sustracción) 
 	
+<<<<<<< HEAD
 -- virtualenv para python 3
 	> virtualenv -p python3 venv
 
@@ -123,6 +124,22 @@ Definir funciones con python (clase7.py, tur.py)
 	Para definir donde empieza la ejecución de un programa en python:
 	
 	>>> if __name__ == '__main__':
+
+
+=======
+Declara variables y expresiones
+
+	• Las expresiones se componen de valores conectados por operadores.
+	• Cuando el PC evalúa una expresión, el resultado es otro valor.
+	• Los valores pueden guardarse en variables. 
+	• Las variables se pueden reasignar. Deben tener un nombre significativo, pero no pueden ser palabras reservadas del lenguaje:
+		○ False
+		○ None
+		○ True
+		○ And
+		○ As
+		○ Assert
+		○ Break
 
 
 
@@ -277,20 +294,6 @@ Ciclos en python con for (for.py)
 		* Si se quiere pasar a la siguiente iteración se utiliza el keyword 'continue'
 
 
------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
------------------------------------------------------------------
 
 Diccionarios en python (clase26.py)
 
@@ -360,4 +363,266 @@ Tuplas en python
 
 Se repite una letra en un string - programa con tuplas
 
+
+Ciclos en python con while (aleatorio.py)
+
+	* Similar a un for loop, pero en lugar de recorrer una secuencia, se ejecuta hasta que una condición se convierta en falsa.
+	* Se debe tener mucho cuidado de no caer en un infinite loop.
+
+	>>> i = 10
+	>>> while i > 0:
+			print('Ando en un loop')
+
+			i = 1
+
+
+ 
+ Calcular si una palabra es palindromo (palindromo.py)
+
+
+Introducción a listas en python (average-temps.py)
+
+	* Es una secuencia de elementos
+	* Cuando se asigna a una variable, permite agrupar varios elementos en un solo lugar.
+	* Se crean con los [] o con la keyword 'list'
+
+	>>> supermercado = ['apio', 'tomate', 'queso']
+	>>> temperaturas = [24, 26, 18, 20, 21]
+	>>> amigos = list()
+
+	* Las listas son mutables
+
+	>>> supermercado[0] = 'salsa'
+	>>> supermercado
+		['salsa', 'tomate', 'queso']
+
+	>>> amigos.append('enrique')  (append agrega un elemento al final de la lista)
+	>>> amigos
+		['enrique']
+	>>> amigos.append('miguel')
+	>>> amigos
+		['enrique', 'miguel']
+
+
+Operaciones con listas en python
 	
+	Con las listas se pueden usar solo dos operadores: suma y multiplicación
+
+	>>> amigos2 = ['2', '3']
+	>>> am = amigos + amigos2
+	>>> am
+		['enrique', 'miguel', '2', '3']
+	>>> am.sort()
+		['2', '3', 'enrique', 'miguel']
+
+
+	>>> amigos * 2
+		['enrique', 'miguel', 'enrique', 'miguel']
+
+
+	Las lista tambien tiene slices
+
+	>>> amigos[1:] = ['miguel']
+	>>> amigos[:1] = ['enrique']
+
+
+Juego del ahorcado con python (ahorcado.py)
+	
+	En python las constantes no exiten, para definir una constante hay que escribirla en mayúscula
+
+
+Qué es una busqueda binaria (binary_search.py)
+
+
+
+
+Uso de sets en python (conjuntos)
+ 
+	Los sets son muy similares a las listas, pero estas no permiten elementos repetidos.
+
+	Cuando trabajamos con sets, podemos realizar las operaciones básicas de conjuntos:
+		* Intercepción 
+		* Diferencia
+		* Unión
+
+	>>> s = set([1, 2, 3])
+	>>> t = set([3, 4, 5])
+	>>> s.union(t) 					# {1, 2, 3, 4, 5}
+	>>> s.intersection(t) 			# {3}
+	>>> s.difference(t) 			# {4, 5}
+
+
+Dictionary comprehension y List comprehension
+
+	Permiten añadir sintactyc sugar
+	Python permite crear e inicializar listas y diccionarios con una sintaxis más natural
+
+	List comprehesion: convierte una secuencia existente en una nueva secuencia.
+
+	List comprehesion != Dictionary comprehesion (list retorna list y dictionary un diccionario)
+
+	----- codigo normal -----
+
+	>>> pares = []
+	>>> for num in range(1,31):    # range() no incluye el ultimo número
+			if num % 2 == 0:
+				pares.append(num)
+	>>> pares
+		[2, 4, 6, 8,.............,30]
+
+
+	----- list comprehesion ----
+	>>> even = [num for num in range(1, 31) if num % 2 == 0]
+	>>> even
+		[2, 4, 6, 8,.............,30]
+
+
+	--- codigo normal diccionarios -----
+	>>> cuadrados = {}
+
+	>>> for num in range(1, 11):
+	    	cuadrados[num] = num**2
+
+	>>> cuadrados
+	
+
+	------ dictionary comprehension ------
+
+	>>> squares = {num: num**2 for num in range(1, 11)}
+	>>> squares
+	num: num**2 (el primer num es la llave y el segundo es el valor)
+
+
+Manejo de errores en python
+
+	* Cuando se genera un error (throw), si este no es atrapado el programa se detiene
+	* Para manejar el error se usan los keywords 'try/except'
+
+		my_string = 'una string'
+
+		try:
+			int(my_string)
+		except ValueError:
+			# manejo del error
+		finally:
+			# Se ejecuta pase lo que pase
+
+
+	Ver la jerarquia de errores en python ??????
+
+	try / except / else / finally
+
+	La clausula else se ejecuta si no han ocurrido excepciones y antes de la clausula finally
+
+
+Errores personalizados (errores.py)
+	
+
+Manejo de archivos en python (escribir.py)
+
+	* Python puede leer y escribir archivos con la función 'open'.
+	* La función 'open' regresa un objeto archivo (file).
+	* Los archivos pueden ser de texto o binarios.
+	* Se tiene que especificar el modo en que se maneja el archivo 
+		- 'r'  = read
+		- 'w'  = write
+		- 'a'  = añadir (append)
+		- 'r+' = leer y escribir
+	* Siempre se debe cerrar el archivo con el metodo 'close'
+	* La mejor manera de manipular archivos es con el keyword 'with' que es un manejador de contexto 
+		si se usa este 'with' no es necesario cerrar el archivo.
+
+
+	Lectura de archivos:
+
+		* El objeto archivo tiene dos métodos para leerlo: read, readlines
+
+		>>> with open('file.txt', 'r') as f:
+				for line in f:
+					print(line)
+
+
+	Escritura de archivos: (si el archivo no exite python lo crea SI EL ARCHIVO EXISTE LO SOBRE ESCRIBE)
+
+		* Para escribir a un archivo, se utiliza el método 'write'
+
+		>>> with open('file.txt', 'w'):
+				for i in range(5):
+					print('hello')
+
+
+
+Programacion orientada a objetos en python
+
+	Clases y objetos
+		* Permite definir tipos propios
+		* Permite manejar datos y lógica en un solo contenedor.
+		* Las clases son como fabricas (moldes) para crear otros objetos.
+
+
+		* Los objetos tiene atributos que se pueden definir al momento de inicializar un nuevo objeto o
+			directamente en la instancia.
+		* Las clases pueden tener variables de clase, variables de instancia y variables locales.
+			- variables locales = las que se definen dentro de una función.
+			- variables globales = las que se definen fuera de las funciones o del código
+			- variable de clase = todos los atributos que comparten todos los objetos de la clase (por lo 
+				general todos los carro tiene 4 llantas)
+			- variable de instancia = el color de un carro, el atributo de cada objeto en especifico.
+		* Aunque python no tiene el concepto de variables privadas integrado al lenguaje, es prática común 
+			definirlas con un guión bajo.
+		* isinstance = para saber si es instancia de una clase
+		  hasattr = si tiene algún atributo
+
+
+		* Los metodos son como funciones que tiene sentido unicamente en el contexto de una clase.
+		* Al igual que las variables privadas, los metodos privados se definen con un guión bajo.
+		* La encapsulación (concepto clave de la programación orientada a objetos):
+			- Declarar todas las variables y metodos como privados a menos que sea necesario que otra
+				parte del programa los acceda.
+			- Esconder la complejidad del programa.		
+		* Un metodo clave que casi todas las clases deben tener es '__init__'
+		* Otro es '__str__'
+		* Existen varios tipos de metodos:
+			- Estaticos
+			- de clase
+			- de instancia
+			- getters
+			- setters
+
+
+Modelar un objeto en python (main.py, lamp.py)
+
+
+Decoradores en python (funcion_protegida.py)
+
+	Es una funcion que recibe como parametro otra funcion y que retorna una tercera funcion
+
+	Se usa el simbolo @
+
+
+Paquetes y modulos
+	
+	* Un modulo permite agrupar funcionalidades comunes en un solo archivo (un modulo es un archivo .py).
+	* Cuando varios modulos agrupan funcionalidades comunes, se agrupan en una carpeta/directorio y son
+		paquetes.
+	* Python reconoce que un directorio es un paquete porque contiene un archivo '__init__.py'
+
+
+
+Entorno virtual en python  (/servidor)
+
+	Paquetes de terceros:
+		* PyPi (python package index): repositorio de paquetes de terceros que se pueden utilizar en
+			proyectos de python
+
+	
+	Ambientes virtuales:
+		* Es buena practica crear un ambiente virtual por cada proyecto de python en el que trabaje.
+		* Evita conflictos de paquetes en el interprete principal
+
+
+
+
+Que es web scraping?
+
+	Es una herramienta que permite visitar sitios web, analizar su contenido y obtener información.
