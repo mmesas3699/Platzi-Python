@@ -1,0 +1,363 @@
+¿Por qué programar en Python?
+
+	Por su comunidad
+	Por su sintaxis clara
+	La usan: Google, Reddit
+	
+	- Que es programar: Programar es darle instrucciones al computador para hacer algo que tu quieres. Desde un sitio web a llevar humanos a marte.
+	Para lograr construir lo que quieres debe unir piezas básicas del lenguaje y dependiendo de como las unas vas a construir eso que imaginas.
+	
+¿Qué es la programación?
+
+	Es una secuencia de instrucciones que especifican cómo realizar un cómputo
+	
+	Todos los programas se componen de 'partes' básicas que se utilizan para crear 'partes ' más complejas.
+	
+	
+Guía de instalación y conceptos básicas
+
+	Python es un lenguaje de programación creado por Guido Van Rossum, con una sintaxis muy limpia, ideado para enseñar a la gente a programar bien. Se trata de un lenguaje interpretado de script.
+	
+	Ventajas:
+		Legible: sintaxis intuitiva y estricta.
+		Productivo: ahorra mucho código.
+		Portable: para todo sistema operativo.
+		Recargado: viene con muchas librerías por defecto.
+		
+		
+Operadores comunes:
+	
+	Longitud de una cadena, lista, tupla:
+	>>> len('key') 
+	
+	Aplicar una conversión a un conjunto como una lista:
+	>>> map(str, [1, 2, 3, 4])
+	['1', '2', '3', '4']
+	
+	Redondear un flotante con X número de decimales:
+	>>> round(6.3243, 1)
+	6.3
+	
+	Generar un rango en una lista:
+	>>> range(5)
+	[0, 1, 2, 3, 4]
+	
+	Sumar un conjunto:
+	>>> sum([1, 2, 4])
+	7
+	
+	Organizar un conjunto:
+	>>> sorted([5, 2, 1])
+	[1, 2, 5]
+	
+	
+Operadores matemáticos en python
+
+	(+) suma
+	(-) resta
+	(*) multiplicación
+	(/) división
+	(//) división de enteros
+	(%) operador modulo = lo que sobra de una división (5%4 = 1)
+	(**) Potencias
+	(>) mayor que
+	(<) menor que
+	(==) igual
+	(>=) mayor igual
+	(<=) menor igual 
+	
+Tipos de datos en python
+
+	Orden de operaciones:
+		PEMDAS (Paréntesis, Exponentes, Multiplicación, División, Adición, Sustracción) 
+	
+-- virtualenv para python 3
+	> virtualenv -p python3 venv
+
+
+
+Declarar variables y expresiones (clase6.py)
+	* Las expresiones se componen de valores conectados por operadores.
+	* Cuando la computadora evalúa una expresión, el resultado es otro valor.
+	* Los valores pueden guadarse en variables.
+	* Las variables se pueden reasignar.
+
+	
+	Nombres de variables:
+		* Tiene que tener nombres significativos
+		* Relacionados con lo que representa la variable
+		* No deben ser Keywords (palabras reservadas del lenguaje):
+
+
+		False	class		finally		is		return
+		None	continue	for		lambda		try
+		True	def		from		nonlocal	while
+		and	del		global		not		with		
+		as	elif		if		or		yield	
+		assert	else		import		pass
+		break	except		in		raise
+
+
+	El tipo de dato le da el contexto al operador:
+
+	> 'hola' + 'platzi' (concatena los strings)
+	> 1 + 2 (3)
+
+	
+
+Definir funciones con python (clase7.py, tur.py)
+	
+	Funciones
+	* Una función es una secuencia de comandos que realizan un cómputo.
+	* Para definirla, se usa el keyword 'def', se le asigna un nombre y se define
+		la secuencia de comandos.
+	* Las funciones son llamadas por su nombre y regresan un resultado.
+	* Pueden recibir cero o más parámetros.
+
+	>>> def suma(num1, num2):
+		return num1 + num2
+
+	>>> suma(2, 3)
+
+
+	Para definir donde empieza la ejecución de un programa en python:
+	
+	>>> if __name__ == '__main__':
+
+
+
+
+Funciones con parámetros (tipo_de_cambio.py)
+
+	Limitantes
+		* El nombre de la función no puede empezar con un digito.
+		* No puede ser una palabra reservada (keyword).
+		* Las variables y las funciones deben tener nombres distintos (la ultima definición es la que gana).
+
+		
+		Flujo de ejecución
+			* Comienza con la primera declaración de arriba hacia abajo.
+			* Cada declaración se ejecuta de izquierda a derecha, siguiendo el orden de 
+				operaciones.
+			* Cuando una declaración contiene una llamada a una función, el cuerpo de la función
+				se ejecuta con las mismas reglas 
+
+
+Estructuras de condicionales en python
+
+	Condicionales:
+		* Una expresión booleana se evalúa como verdadera o falsa (True, False)
+		* Los operadores relacionales son:
+			== (igual)
+			!= (diferente)
+			< (menor que)
+			> (mayor que)
+			<= (menor o igual)
+			>= (mayor o igual)
+		* Los operadores lógicos son:
+			and
+			or
+			not
+
+
+Calcular si un número es primo (numeros-primos.py)
+
+Buenas practicas del lenguaje
+	
+	El Zen de Python:
+		En la consola interactiva 
+		>>> import this (retorna el zen de python)
+
+		Hermoso es mejor que feo.
+		Explícito es mejor que implícito.
+	Simple es mejor que complejo.
+	Complejo es mejor que complicado.
+	Sencillo es mejor que anidado.
+	Escaso es mejor que denso.
+	La legibilidad cuenta.
+	Los casos especiales no son lo suficientemente especiales para romper las reglas.
+	Lo práctico le gana a la pureza.
+	Los errores no debe pasar en silencio.
+	A menos que sean silenciados.
+	En cara a la ambigüedad, rechazar la tentación de adivinar.
+	Debe haber una - y preferiblemente sólo una - manera obvia de hacerlo.	
+	Aunque esa manera puede no ser obvia en un primer momento a menos que seas holandés.
+	Ahora es mejor que nunca.
+	Aunque “nunca” es a menudo mejor que “ahora mismo”.
+	Si la aplicación es difícil de explicar, es una mala idea.
+	Si la aplicación es fácil de explicar, puede ser una buena idea.
+	Los espacios de nombres son una gran idea ¡hay que hacer más de eso!
+
+
+Comparación de string y unicode
+
+	Los str son inmutables
+	Para modificarla hay que crear un nuevo string
+
+	ASCII vs UNICODE
+		* Ambos son codificadores de caracteres
+		* ASCII (American standard code for information interchange)
+		* UNICODE incluye la mayoria de los alfabetos del mundo
+
+		Python codifica en ASCII por defecto, para cambiarlo por UNICODE debemos colocar 'u' antes del string
+
+		Python 2 = ASCII
+		Python 3 = UNICODE
+
+
+Factorial de un número con recursión (factorial.py)
+
+
+	def fact(n):
+	    pass
+
+	 Factorial de 5 se expresa 5!:
+	 	5! = 120
+
+	 	5 * fact(4)
+	 		4 * fact(3)
+	 			3 * fact(2)
+	 				2 * fact(1)
+	 					1 * fact(0)
+	 						1
+
+   				    	1 * 1   <---- va en esta dirección
+    					1
+    				2 * 1
+    				2
+    			3 * 2
+    			6
+    		4 * 6
+    		24
+    	5 * 24
+    	120
+
+
+Manejo de strings en python
+
+	* Un string es una secuencia de caracteres.
+	* Los caracteres se pueden acceder por su indice (los indices empiezan en cero)
+
+
+		0	1	2	3	4	5	
+		p 	l 	a 	t 	z 	i
+
+	>>> len(string) (retorna el tamaño del string)
+
+	OFF BY ONE (como en excel)
+
+	>>> my_string = 'miguel'
+	>>> my_string.upper()
+		MIGUEL
+	>>> my_string.lower()
+		miguel
+	>>> my_string.find('i') (retorna la posición de la primera ocurrencia)
+		1
+	
+
+Separar cadenas de texto en python
+
+	slice 
+	>>> string = 'platzi'
+	>>> string[1:6:2] (va de dos en dos)
+	>>> string[::-1] (imprime platzi al reves)
+
+
+Ciclos en python con for (for.py)
+
+	Iteración:
+		* Las iteraciones permiten realizar la misma secuencia de pasos varias veces.
+		* También permite recorrer una secuencia (como un string).
+		* Es una de las herramientas clave de cualquier programa.
+
+	For loop
+		* Se puede utilizar para recorrer strings.
+		* Se necesita el keyword 'in'.
+		* Si se quiere salir antes de una iteración se utiliza el keyword 'break'.
+		* Si se quiere pasar a la siguiente iteración se utiliza el keyword 'continue'
+
+
+-----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------
+
+Diccionarios en python (clase26.py)
+
+	* Un diccionario es un mapa de llaves a valores. Los valores pueden ser de cualquier tipo.
+	* Se crea con llaves {} o con el keyword 'dict'
+	* Se añaden elementos al diccionario señalando la llave y el valor
+
+	Ejemplo:
+
+	>>> mi_dict = {}
+	>>> mi_dict['llave'] = 'valor'
+
+	También se pueden añadir valores al momento de inicalizarlo:
+
+	>>> mi_dict{'llave': 'valor'}
+
+
+	Iteración en diccionarios:
+
+		* Al iterar un diccionario, de manera predeterminada, se obtendrán las llaves.
+		* Es posible también iterar a través de los valores.
+		* También se permite obtener las llaves y los valores al mismo tiempo.
+
+
+		for key in diccionario:      (imprime las llaves)
+ 		    print(key)
+
+
+ 		for value in diccionario: 	(tambien imprime las llaves)
+ 		    print(value)
+
+
+ 		for value in diccionario.values():		(este si imprime los valores)
+ 		    print(value)
+
+
+ 		--- python 2.X
+
+ 		for key, value in diccionario.iteritems():
+ 		    print(key, value)
+
+ 		--- python 3.x
+
+ 		for key, value in diccionario.items():
+ 			print(key, value)
+
+
+
+Encriptar mensajes usando diccionarios(criptografia.py)
+
+Tuplas en python
+
+	* Las tuplas son una secuencia de valores por enteros (integers).
+	* Similares a las listas, con la gran diferencia de que son inmutables.
+	* Las tuplas se crean separando los valores con comas.
+		- Es practica común encerrar los valores en parentesis
+	* Se pueden utilizar para devolver más de un valor en una función o crear
+		estructuras de datos ligeras.
+
+	mi_tupla = 1, 2, 3, 4
+	mi_tuple = (1, 2, 3, 4)
+
+	Para declarar una tupla de un solo valor:
+
+	>>> mi_tupla = (1,)  # La coma es necesaria o si no lo tomaria como un 'int'
+
+
+Se repite una letra en un string - programa con tuplas
+
+	
