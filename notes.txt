@@ -71,7 +71,6 @@ Tipos de datos en python
 	Orden de operaciones:
 		PEMDAS (Paréntesis, Exponentes, Multiplicación, División, Adición, Sustracción) 
 	
-<<<<<<< HEAD
 -- virtualenv para python 3
 	> virtualenv -p python3 venv
 
@@ -126,7 +125,6 @@ Definir funciones con python (clase7.py, tur.py)
 	>>> if __name__ == '__main__':
 
 
-=======
 Declara variables y expresiones
 
 	• Las expresiones se componen de valores conectados por operadores.
@@ -626,3 +624,20 @@ Entorno virtual en python  (/servidor)
 Que es web scraping?
 
 	Es una herramienta que permite visitar sitios web, analizar su contenido y obtener información.
+
+
+
+Implementando web scraping con python (web_scraping/)
+
+
+Interfaz directorio de contactos (agenda_contactos/contactos-interfaz.py, contactos-implementacion.py )
+
+
+Persistencia de datos (agenda_contactos/contactos.py , contactos.csv)
+
+
+Configurando el entorno de desarrollo de Google Cloud (clase45/)
+	
+	> gcloud init
+
+
