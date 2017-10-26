@@ -641,3 +641,45 @@ Configurando el entorno de desarrollo de Google Cloud (clase45/)
 	> gcloud init
 
 
+Python 2 vs Python 3
+https://wiki.python.org/moin/Python2orPython3
+http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html#raising-exceptions
+
+	* print (en python 3 es una función).
+	* unicode esta establecido por defecto.
+		2.x  
+			>>> a = 'ñaña'
+			>>> a
+				'\xc3\xb1a\xc3\xb1a' 
+
+		3.x 
+			>>> a = 'ñaña'
+			>>> a
+				'ñaña'
+
+	* division de enteros
+		2.x 
+			>>> 5 / 2
+				2
+
+		3.x
+			>>> 5 / 2
+				2.5
+
+	* raising exceptions
+	* input vs raw_input
+
+
+Que puedes construir con python
+
+	* Desarrollo web
+	* Ciencia de datos
+	* Machine learning e Inteligencia artificial
+	* Programas de escritorio
+	* Lineas de comando
+	* Internet de las cosas
+	* Web scraping y bots
+	* Criptografia
+	* Finanzas
+	* Biologia computacional
+	* Ciencias exactas y academia
